@@ -418,8 +418,25 @@ th {
   color: slategray;
 }
 
+.page-element {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+* {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Allerta Stencil", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: aquamarine;
+}
+a:hover {
+  color: aqua;
 }
 
 body {
@@ -432,7 +449,6 @@ body header {
   background: aqua;
   padding-top: 2.5em;
   padding-bottom: 2.5em;
-  padding-left: 5em;
 }
 body header h1 {
   font-size: 42pt;
@@ -440,6 +456,47 @@ body header h1 {
   line-height: 16pt;
   align-self: center;
   color: darkslategray;
+}
+body main {
+  background: white;
+}
+body main .search-bar {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+body main .search-bar .hint {
+  font-size: 10pt;
+  margin-bottom: 0.5em;
+}
+body main .search-bar .search form input {
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid slategray;
+  color: slategray;
+}
+body main .search-bar .search form input::placeholder {
+  color: #768594;
+}
+body main .search-bar .search form a {
+  color: slategray;
+}
+body main .search-bar .search form a * {
+  color: slategray;
+}
+body footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  height: 2em;
+  padding-top: 1.25em;
+  background: aqua;
+  align-content: center;
+}
+body footer p {
+  font-size: 10pt;
+  color: lightslategray;
+  line-height: 0.25em;
 }
 
 /*# sourceMappingURL=../../css/styles.css.map */

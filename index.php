@@ -1,6 +1,7 @@
 <?php
     $appName = "xFindr";
-    $title = "{$appName} &bull; HOME";
+    $title = "{$appName} &bull; ";
+    $title .= (array_key_exists('q', $_GET)) ? $_GET['q'] ?: "Home" : "Home";
 
 ?>
 <!doctype html>
@@ -18,27 +19,27 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 <body>
-<header >
+<header class="page-element">
     <h1><?= $appName ?></h1>
 </header>
 
-<main>
-    <div class="row">
+<main class="page-element">
+    <div class="row search-bar">
         <p class="hint">Enter a term to search for</p>
         <div class="search">
             <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
                 <input type="text" name="q" id="q" placeholder="Search">
-                <button type="button" onclick="_(event);"><i class="fa fa-search"></i></button>
+                <a href="#" onclick="_(event);"><i class="fa fa-search"></i></a>
             </form>
         </div>
     </div>
     <div class="row">
-<!--        result-->
+        <div class="results-container" id="results"></div>
     </div>
 </main>
 
-<footer>
-
+<footer class="page-element">
+    <p>Coded by R&aacute;pheekwon Rhooms</p>
 </footer>
 
 <script type="text/javascript" src="src/js/app.js"></script>
