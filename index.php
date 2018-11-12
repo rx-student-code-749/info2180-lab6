@@ -26,8 +26,7 @@ $title .= (array_key_exists('q', $_GET)) ? $_GET['q'] ?: "Home" : "Home";
 <body>
 <header class="page-element">
     <h1><?= $appName ?></h1>
-</header>
-<main class="page-element-full-width">
+</header><main class="page-element-full-width">
     <div class="row search-bar">
         <p class="hint">Enter a term to search for</p>
         <div class="search">

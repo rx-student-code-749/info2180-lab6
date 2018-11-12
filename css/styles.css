@@ -15,7 +15,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import url("https://fonts.googleapis.com/css?family=Allerta+Stencil|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Allerta+Stencil|Montserrat|Pacifico");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -423,6 +423,17 @@ th {
   padding-right: 5em;
 }
 
+.page-element-full-width {
+  padding: 0;
+  margin: 0;
+}
+.page-element-full-width > div.row {
+  padding-left: 5em;
+  padding-right: 5em;
+  margin: 0;
+  width: auto;
+}
+
 * {
   margin: 0;
 }
@@ -437,6 +448,50 @@ a {
 }
 a:hover {
   color: aqua;
+}
+a .word-btn {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14pt;
+  background: whitesmoke;
+  color: slategray;
+}
+a .word-btn:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+ol li.list-item {
+  background: ghostwhite;
+  color: darkslategray;
+  width: 100%;
+  padding: 2.5em 0 2.5em 1.5em;
+}
+ol li.list-item:nth-child(even) {
+  background: #f3f3ff;
+}
+ol li.list-item h3.list-item-keyword {
+  font: "Allerta Stencil", sans-serif;
+  font-size: 14pt;
+  font-weight: bolder;
+  display: inline-block;
+}
+ol li.list-item h3.list-item-keyword + p.list-item-author {
+  padding-left: 1em;
+}
+ol li.list-item p.list-item-author {
+  display: inline-block;
+  font-size: 12pt;
+  color: slategray;
+  font: "Pacifico", cursive;
+}
+ol li.list-item p.list-item-description {
+  font-size: 10pt;
+  color: black;
 }
 
 body {
@@ -458,9 +513,13 @@ body header h1 {
   color: darkslategray;
 }
 body main {
-  background: white;
+  display: grid;
+  grid-template-rows: 100% 100%;
+  overflow: auto;
+  padding-bottom: 5em;
 }
 body main .search-bar {
+  background: white;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
@@ -469,7 +528,7 @@ body main .search-bar .hint {
   margin-bottom: 0.5em;
 }
 body main .search-bar .search form input {
-  margin: 0;
+  margin: 0 0.5em 0 0;
   border: none;
   border-bottom: 2px solid slategray;
   color: slategray;
@@ -482,6 +541,16 @@ body main .search-bar .search form a {
 }
 body main .search-bar .search form a * {
   color: slategray;
+}
+body main .search-bar .search form a + a {
+  margin-left: 1em;
+}
+body main #results {
+  min-height: 15em;
+  height: auto;
+  width: 100%;
+  background: ghostwhite;
+  padding-bottom: 5em;
 }
 body footer {
   bottom: 0;
