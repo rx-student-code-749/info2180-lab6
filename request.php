@@ -6,7 +6,7 @@
 $query = $_GET['q'];
 $definition = [
     "definition" => "A statement of the exact meaning of a word, especially in a dictionary.",
-    "bar" => "A place that sells alcholic beverages",
+    "bar" => "A place that sells alcoholic beverages",
     "ajax" => "Technique which involves the use of javascript and xml (or JSON)",
     "html" => "The standard markup language for creating web pages and web applications.",
     "css" => "A style sheet language used for describing the presentation of a document written in a markup language.",
