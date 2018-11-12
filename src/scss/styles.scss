@@ -1,1 +1,30 @@
 @import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Montserrat');
+@import "variables";
+@import "utility";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font;
+}
+
+body {
+    font-family: $script-font;
+    font-size: 14pt;
+    background: ghostwhite;
+    color: black;
+    
+    header {
+        background: aqua;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        padding-left: 5em;
+        
+        h1 {
+            font-size: 42pt;
+            letter-spacing: 16pt;
+            line-height: 16pt;
+            align-self: center;
+            color: darkslategray;
+        }
+    }
+}
