@@ -4,12 +4,12 @@ const uri = document.getElementById('q').closest('form').getAttribute('action');
 
 function fn (e) {
     e.preventDefault();
+
     let query = q.val();
+
     results.empty();
     if (query != null)
         results.load(uri + '?q=' + query);
-    // else
-    //     $(results).a
 }
 
 function fn2 (e) {
@@ -55,8 +55,5 @@ function fn2 (e) {
 
         results.empty();
         results.append(listContainer);
-        // results.innerHTML = listContainer.innerHTML;
-
-        console.log(results);
     });
 }

@@ -25,7 +25,6 @@ a {
         font-size: 14pt;
         background: whitesmoke;
         color: slategray;
-        //background: transparentize(white, 2);
         
         &:hover {
             font-weight: bolder;
@@ -55,10 +54,6 @@ ol {
                 font-weight: bolder;
                 display: inline-block;
                 
-                //&:after {
-                //    content: '\u2022';
-                //    padding: 0 .5em;
-                //}
                 & + p.list-item-author {
                     padding-left: 1em;
                 }
