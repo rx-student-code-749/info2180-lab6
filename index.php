@@ -1,7 +1,7 @@
 <?php
-    $appName = "xFindr";
-    $title = "{$appName} &bull; ";
-    $title .= (array_key_exists('q', $_GET)) ? $_GET['q'] ?: "Home" : "Home";
+$appName = "xFindr";
+$title = "{$appName} &bull; ";
+$title .= (array_key_exists('q', $_GET)) ? $_GET['q'] ?: "Home" : "Home";
 
 ?>
 <!doctype html>
@@ -16,20 +16,25 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="page-element">
     <h1><?= $appName ?></h1>
 </header>
-
-<main class="page-element">
+<main class="page-element-full-width">
     <div class="row search-bar">
         <p class="hint">Enter a term to search for</p>
         <div class="search">
-            <form action="<?= $_SERVER['PHP_SELF'] ?>" method="get">
+            <form action="request.php" method="get">
                 <input type="text" name="q" id="q" placeholder="Search">
-                <a href="#" onclick="_(event);"><i class="fa fa-search"></i></a>
+                <a href="#" onclick="fn(event);"><i class="fa fa-search"></i></a>
+                <a href="#" onclick="fn2(event);" class="word-btn">Get All Definitions</a>
             </form>
         </div>
     </div>
